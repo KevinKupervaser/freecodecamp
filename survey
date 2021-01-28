@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="My first survey">
+        <meta name="keywords" content="Survey from kevin">
+        <meta name="author" content="Kevin Kupervaser">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tom Brady the G.O.A.T.</title>
+    </head>
+    <style>
+        body {
+    font-family: "arial";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1cm;
+    color: white;
+    margin: 0;
+}
+
+/* mobile friendly */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background-color: purple;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+h1 {
+    ;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+p {
+    font-size: 1.125rem;
+}
+
+h1,
+p {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+label {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: arial;
+  font-size: 16px;
+  line-height: 1cm;
+}
+
+button {
+  border: none;
+}
+
+.container {
+  width: 100%;
+  margin: 5px auto 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+form {
+  background-color: darkblue;
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+}
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+
+.form-group {
+    margin: 0 auto 1.25rem auto;
+    padding: 0.20rem;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input-radio,
+.input-checkbox {
+    display: inline-block;
+    margin-right: 0.3cm;
+    min-height: 0.5cm;
+    min-width: 0.5cm;
+}
+
+.input-textarea {
+    min-height: 150px;
+    width: 100%;
+    padding: 0.3cm;
+    resize: vertical;
+}
+
+.submit-button {
+    display: block;
+    color: darkgreen;
+    font-size: 50px;
+    font-weight: 600;
+    width: 100%;
+    padding: 1cm;
+    background-color: greenyellow;
+    cursor: pointer;
+}
+
+.headerbox {
+    background-color: rgb(20, 98, 129);
+    padding: 0.2cm 0.2cm;
+    border-radius: none;
+}
+
+
+    </style>
+    <div class="container">
+        
+        <div class="headerbox">
+        <header class="header">
+            <h1 id="title">WELCOME TO MY SURVEY</h1>
+            <p id="description">Thanks for taking my survey</p>
+        </header>
+        </div>
+
+        <form id="survey-form">
+            <div class="form-group">
+                <label id="name-label" for="name">Name:</label><br>
+                <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                placeholder="Enter your name"
+                required
+                />
+            </div>
+            
+            <div class="form-group">
+                <label id="email-label" for="email">Email:</label><br>
+                <input 
+                type="text"
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="Enter your email"
+                required
+                />
+            </div>
+
+            <div class="form-group">
+                <label id="number-label" for="age">Age: (optional)</label><br>
+                <input
+                type="number"
+                name="age"
+                id="age"
+                min="10"
+                max="99"
+                class="form-control"
+                placeholder="Enter your age"
+                />
+            </div>
+
+            <div class="form-group">
+                <p style="text-align: left;">Which option best describes your current role?</p>
+                <select name="role" id="dropdown" class="form-control" required>
+                    <option disabled selected value>Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="job">Full time job</option>
+                    <option value="intern">Internship progam</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <p style="text-align: left;">Would you recomend taking my survey?</p>
+                <label>
+                    <input
+                    name="user-recomend"
+                    value="definitely"
+                    class="input-radio"
+                    type="radio"
+                    checked
+                />Definitely</label>
+
+                <label>
+                    <input
+                    name="user-recomend"
+                    value="maybe"
+                    class="input-radio"
+                    type="radio"
+                    />Maybe</label>
+
+                <label>
+                    <input
+                    name="user-recomend"
+                    value="not-sure"
+                    class="input-radio"
+                    type="radio"
+                    />Not sure</label>
+                </div>
+        
+            <div class="form-group">
+                <p style="text-align: left;">
+                    What would you like to see improved?
+                    <span class="clue">(Check all that apply)</span>
+                </p>
+                
+                <label>
+                    <input
+                    name="prefer"
+                    type="checkbox"
+                    value="front-end"
+                    class="input-checkbox"
+                    />Front-End</label>
+                    
+                    <label>
+                        <input
+                        name="prefer"
+                        type="checkbox"
+                        value="back-end"
+                        class="input-checkbox"
+                        />Back-End</label>
+                        
+                        <label>
+                            <input
+                            name="prefer"
+                            type="checkbox"
+                            value="html5"
+                            class="input-checkbox"
+                            />Html 5 exercises</label>
+            </div>
+            
+            <div class="form-group">
+                <p style="text-align: left;">Please enter Comments or Sugestions</p>
+                <textarea
+                id="comments"
+                class="input-textarea"
+                name="comment"
+                placeholder="enter your text here...">
+            </textarea>
+            </div>
+            
+            <div class="form-group">
+                <button 
+                type="submit" 
+                id="submit" 
+                class="submit-button">
+                Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</html>
